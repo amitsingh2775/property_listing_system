@@ -1,7 +1,7 @@
 import Redis from 'ioredis';
 import { Request, Response, NextFunction } from 'express';
 
-// Redis client using Upstash Redis URL
+// i use to connect he redis
 export const redisClient = new Redis("rediss://default:AU9gAAIjcDFlMTZjMTg4ODYyNDI0YjhkYjgzZjViZjI0YzVkNWRiM3AxMA@pumped-mastodon-20320.upstash.io:6379");
 
 export async function cacheMiddleware(req: Request, res: Response, next: NextFunction) {

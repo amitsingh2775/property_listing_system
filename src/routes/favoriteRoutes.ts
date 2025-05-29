@@ -4,8 +4,8 @@ import authMiddleware from '../middleware/authMiddleware';
 
 const router = Router();
 
-router.post('/', authMiddleware, addFavorite);          // add favorite
-router.get('/', authMiddleware, getFavorites);          // get all favorites
-router.delete('/:propertyId', authMiddleware, removeFavorite);  // remove favorite by custom id
+router.post('/', authMiddleware, addFavorite);          
+router.get('/', authMiddleware, getFavorites);          
+router.delete('/:propertyId', authMiddleware, removeFavorite);  
 
 export default router;

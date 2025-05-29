@@ -11,10 +11,10 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
-// MongoDB Connection
+
 mongoose.connect(process.env.MONGODB_URI as string).then(() => console.log('MongoDB connected')).catch(err => console.error(err));
 
-// Routes
+// there are all Routes
 app.get('/', (req: Request, res: Response) => res.send('Property Listing System API'));
 app.use('/api/auth', authRoutes);
 app.use('/api/properties', propertyRoutes);
